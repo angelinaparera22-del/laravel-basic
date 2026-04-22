@@ -63,7 +63,7 @@ class StudentController extends Controller
     {
         return view('Student.edit', [
             'title' => ' Edit STUDENT',
-            'students' => $student,
+            'student' => $student,
         ]);
     }
 
@@ -73,7 +73,7 @@ class StudentController extends Controller
     public function update(Request $request, Student $student)
     {
         $validated = $request->validate([
-            'name' => 'required|max::255',
+            'name' => 'required|max:255',
             'nim' => 'required|digits:11|numeric',
         ],[
             'name.required' => 'Nama tidak boleh kosong',
