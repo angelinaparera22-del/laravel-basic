@@ -13,7 +13,7 @@
     <ul class="list-group">
         @foreach ($departments as $department)
             <li class="list-group-item">
-                {{ $loop->iteration }}. {{ $department->name }} -- {{ $lecturer->department->name }}
+                {{ $loop->iteration }}.{{ $department->name }}
                 <a class="btn btn-warning btn-sm " href="{{ route('department.edit', $department) }}"
                     role="button">edit</a>
                 <form action="{{ route('department.destroy', $department) }}" method="POST" class="d-inline">

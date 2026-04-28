@@ -15,4 +15,4 @@ Route::put('/Student/{student}', [StudentController::class, 'update'])->name('St
 Route::delete('/Student/{student}', [StudentController::class, 'destroy'])->name('Student.destroy');
 
 Route::resource('department', DepartmentController::class);
-Route::resource('Lecturer', LecturerController::class);
+Route::resource('lecturer', LecturerController::class);

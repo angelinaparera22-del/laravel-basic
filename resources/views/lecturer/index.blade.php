@@ -8,14 +8,14 @@
         </div>
     @endsession
 
-    <a class="btn btn-primary mb-3" href="{{ route('Lecturer.create') }}" role="button">CREATE</a>
+    <a class="btn btn-primary mb-3" href="{{ route('lecturer.create') }}" role="button">CREATE</a>
 
     <ul class="list-group">
         @foreach ($lecturers as $lecturer)
             <li class="list-group-item">
                 {{ $loop->iteration }}. {{ $lecturer->name }} -- {{ $lecturer->department->name }}
-                <a class="btn btn-warning btn-sm " href="{{ route('Lecturer.create', $lecturer) }}" role="button">edit</a>
-                <form action="{{ route('Lecturer.destroy', $lecturer) }}" method="POST" class="d-inline">
+                <a class="btn btn-warning btn-sm " href="{{ route('lecturer.edit', $lecturer) }}" role="button">edit</a>
+                <form action="{{ route('lecturer.destroy', $lecturer) }}" method="POST" class="d-inline">
                     @method('DELETE')
                     @csrf
 
